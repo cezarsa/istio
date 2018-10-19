@@ -43,6 +43,7 @@ ROOT="$PWD"
 GOPATH="$(cd "$ROOT/../../.." && pwd)"
 export GOPATH
 echo gopath is "$GOPATH"
+export ISTIO_VERSION="${CB_VERSION}"
 ISTIO_OUT=$(make DEBUG=0 where-is-out)
 
 MAKE_TARGETS=(istio-archive)
