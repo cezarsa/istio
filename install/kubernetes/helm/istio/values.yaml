@@ -325,3 +325,13 @@ global:
   # Use the Mesh Control Protocol (MCP) for configuring Mixer and
   # Pilot. Requires galley (`--set galley.enabled=true`).
   useMCP: false
+
+  # Extra node affinity terms, these entries will be added to the
+  # matchExpressions field inside the
+  # requiredDuringSchedulingIgnoredDuringExecution node affinity.
+  affinityMatchExpressions: []
+  # - key: my.org/nodetype
+  #   operator: In
+  #   values:
+  #     - value1
+  #     - value2
