@@ -325,3 +325,7 @@ global:
   # Use the Mesh Control Protocol (MCP) for configuring Mixer and
   # Pilot. Requires galley (`--set galley.enabled=true`).
   useMCP: false
+
+# TODO
+telemetry-gateway:
+  enabled: false
