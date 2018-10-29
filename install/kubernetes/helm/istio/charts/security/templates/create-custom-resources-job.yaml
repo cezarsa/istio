@@ -72,6 +72,8 @@ spec:
         app: istio-security
         release: {{ .Release.Name }}
     spec:
+      affinity:
+      {{- include "nodeaffinity" . | indent 6 }}
       serviceAccountName: istio-security-post-install-account
       containers:
         - name: hyperkube

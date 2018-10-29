@@ -62,6 +62,8 @@ spec:
         app: istio-grafana
         release: {{ .Release.Name }}
     spec:
+      affinity:
+      {{- include "nodeaffinity" . | indent 6 }}
       serviceAccountName: istio-grafana-post-install-account
       containers:
         - name: hyperkube
